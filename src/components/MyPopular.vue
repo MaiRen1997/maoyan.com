@@ -1,6 +1,6 @@
 <template>
   <div class="contain">
-    <h4>最受好评电影</h4>
+    <h4>最受好评电影</h4> 
     <div class="ul_move">
       <ul>
         <li v-for="item in list" :key="item._id">
@@ -44,7 +44,7 @@ export default {
   },
   watch: {
     async list() {
-      console.log("list改变了");
+      // console.log("list改变了");
       await this.$nextTick();
       new BetterScroll(".ul_move", {
         scrollX: true,

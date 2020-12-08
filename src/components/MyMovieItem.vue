@@ -1,6 +1,11 @@
 <template>
   <div class="movie_list">
-    <div v-for="(item, index) in movie_list" :key="index" class="item_contain">
+    <div 
+    v-for="(item, index) in movie_list" 
+    :key="index" 
+    class="item_contain"
+    @click="MoveToDetail(item.movieid)"
+    >
       <!-- 图片 -->
       <div class="item_left">
         <img :src="item.img | filter_url" alt="" />
@@ -34,6 +39,13 @@ export default {
   props: ["movie_list"],
   data() {
     return {};
+  },
+  methods:{
+    MoveToDetail(id){
+      this.$router.push({
+        name:"detail",params:{movieId:id}
+      });
+    }
   },
   filters: {
     filter_url(val) {

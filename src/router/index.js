@@ -113,6 +113,12 @@ const routes = [
     ]
   },
   {
+    path: "/detail/:movieId",
+    name:"detail",
+    props:true,
+    component: ()=>import ("../views/Detail.vue")
+  },
+  {
     path: "*",
     component: () => import("../views/Not404.vue")
   }

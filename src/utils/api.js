@@ -11,3 +11,8 @@ export const getMovieListApi = params => {
 export const getMovieListMoreApi = params => {
   return http.post("/movies/more", params);
 };
+//详情页数据
+/* export const getMovieDetailApi = params => {
+  return http.post("/movies/detail", params);
+}; */
+export const getMovieDetailApi = params => http.post("/movies/detail", params);
