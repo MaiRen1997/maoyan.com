@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <address>杭州</address>
+    <address v-on:click ="goToCities">{{ city.name }}</address>
     <ul>
       <!-- <li
         v-for="(item, index) in navList"
@@ -57,6 +57,9 @@ export default {
     },
     abc(){
       console.log(1);
+    },
+    goToCities(){
+      this.$router.push("/cities");
     }
   }
 };

@@ -119,6 +119,10 @@ const routes = [
     component: ()=>import ("../views/Detail.vue")
   },
   {
+    path:"/cities",
+    component:()=>import("../views/Cities.vue")
+  },
+  {
     path: "*",
     component: () => import("../views/Not404.vue")
   }
